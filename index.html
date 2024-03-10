@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Vibe</title>
+    <link rel="icon" href="./img/favicon.png" type="image/png" id="favicon">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <script src="./script/script.js"></script>
+   <script src="./script/show.js"></script>
+</head>
+
+<body onload="show()">
+    <div class="height">
+
+        <!-- header -->
+
+        <header>
+
+            <div class="header-top">
+                <img class="logo" src="./img/logo.png">
+                <img class="logo-small" src="./img/favicon.png">
+                <div class="header-menu">
+                    <div class="header-btn">
+                        <img class="header-icon" src="./img/house-solid.svg"><span class="header-text">Startseite</span>
+                    </div>
+                    <div class="header-btn">
+                        <img class="header-icon" src="./img/magnifying-glass-solid.svg"><span
+                            class="header-text">Suche</span>
+                    </div>
+                    <div class="header-btn">
+                        <img class="header-icon" src="./img/compass-regular.svg"><span
+                            class="header-text">Entdecken</span>
+                    </div>
+                    <div class="header-btn">
+                        <img class="header-icon" src="./img/clapperboard-solid.svg"><span
+                            class="header-text">Reels</span>
+                    </div>
+                    <div class="header-btn">
+                        <img class="header-icon" src="./img/paper-plane-regular.svg"><span
+                            class="header-text">Nachrichten</span>
+                    </div>
+                    <div class="header-btn">
+                        <img class="header-icon" src="./img/heart-regular.svg"><span
+                            class="header-text">Benachrichtigungen</span>
+                    </div>
+                    <div class="header-btn">
+                        <img class="header-icon" src="./img/square-plus-regular.svg"><span
+                            class="header-text">Erstellen</span>
+                    </div>
+                    <div class="header-btn">
+                        <img class="profil-img-header" src="./img/person/pascale.jpg"><span
+                            class="header-text">Profil</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-bottom">
+                <div class="header-btn-menu-bar" onclick="showOverlay()">
+                    <img class="header-icon" src="./img/bars-solid.svg"><span class="header-text">Mehr</span>
+                </div>
+            </div>
+
+        </header>
+
+        <!-- overlay -->
+
+        <div class="overlay" id="overlay">
+            <div class="header-btn-overlay">
+                <img class="header-icon" src="./img/house-solid.svg">
+            </div>
+            <div class="header-btn-overlay">
+                <img class="header-icon" src="./img/magnifying-glass-solid.svg">
+            </div>
+            <div class="header-btn-overlay">
+                <img class="header-icon" src="./img/compass-regular.svg">
+            </div>
+            <div class="header-btn-overlay">
+                <img class="header-icon" src="./img/clapperboard-solid.svg">
+            </div>
+            <div class="header-btn-overlay">
+                <img class="header-icon" src="./img/paper-plane-regular.svg">
+            </div>
+            <div class="header-btn-overlay">
+                <img class="header-icon" src="./img/heart-regular.svg">
+            </div>
+            <div class="header-btn-overlay">
+                <img class="header-icon" src="./img/square-plus-regular.svg">
+            </div>
+            <div class="header-btn-overlay">
+                <img class="profil-img-header" src="./img/person/pascale.jpg">
+            </div>
+            <div class="header-btn-overlay">
+                <img class="header-icon" src="./img/bars-solid.svg">
+            </div>
+            <div class="header-btn-overlay" onclick="closeOverlay()">
+                <img class="header-icon" src="./img/close-icon.svg">
+            </div>
+        </div>
+
+
+        <!-- main-section -->
+
+        <div class="main-section">
+
+            <!-- person-section -->
+
+            <div class="person-section">
+                <div class="person-first">
+                    <img src="./img/person/pascale.jpg" class="photo-round">
+                    <span class="photo-small-text">Your story</span>
+                </div>
+                <div class="person">
+                    <img src="./img/person/person1.jpg" class="photo-round">
+                    <span class="photo-small-text">travel_mara</span>
+                </div>
+                <div class="person">
+                    <img src="./img/person/person2.jpg" class="photo-round">
+                    <span class="photo-small-text">max.muster</span>
+                </div>
+                <div class="person">
+                    <img src="./img/person/person3.jpg" class="photo-round">
+                    <span class="photo-small-text">ballet_barbara123</span>
+                </div>
+                <div class="person">
+                    <img src="./img/person/person4.jpg" class="photo-round">
+                    <span class="photo-small-text">lena2345</span>
+                </div>
+                <div class="person">
+                    <img src="./img/person/person5.jpg" class="photo-round">
+                    <span class="photo-small-text">live_and_laugh</span>
+                </div>
+            </div>
+
+            <!-- posts-section -->
+
+            <div class="posts-section" id="post-section">
+            </div>
+
+            <!-- footer -->
+            
+            <footer>
+                <a href="impressum.html">Impressum</a>
+                <div class="separator">|</div>
+                <a href="datenschutz.html">Datenschutz</a>
+            </footer>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
