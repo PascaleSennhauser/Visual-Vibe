@@ -1,59 +1,19 @@
-let posts = [
-    {
-        'imgHeader': './img/person/person3.jpg',
-        'name': 'ballet_barbara123',
-        'weeks': 11,
-        'location': 'Dance-Center Zürich',
-        'img': './img/post-img/dance.jpg',
-        'heart': './img/heart-regular.svg',
-        'likeCount': 30,
-        'saveIcon': './img/bookmark-regular.svg',
-        'description': `It's always been my passion. When I dance, I feel free ❤️ What is your biggest passion?`,
-        'commentsCount': 3,
-        'comments': ['Wow, sieht super aus.', 'My passion is football. ❤️', 'Ich liebe es auch zu tanzen.']
-    },
-
-    {
-        'imgHeader': './img/person/person2.jpg',
-        'name': 'max.muster',
-        'weeks': 12,
-        'location': 'Winterthur',
-        'img': './img/post-img/dog.jpg',
-        'heart': './img/heart-regular.svg',
-        'likeCount': 41,
-        'saveIcon': './img/bookmark-regular.svg',
-        'description': `A quick walk with my dog 🌳`,
-        'commentsCount': 2,
-        'comments': ['Jöö 😍', 'Ich liebe Hunde. 🐕']
-    },
-
-    {
-        'imgHeader': './img/person/person1.jpg',
-        'name': 'travel_mara',
-        'weeks': 12,
-        'location': 'Spain',
-        'img': './img/post-img/beach.jpg',
-        'heart': './img/heart-regular.svg',
-        'likeCount': 30,
-        'saveIcon': './img/bookmark-regular.svg',
-        'description': `Enjoying my holidays at the beach 🏖️`,
-        'commentsCount': 3,
-        'comments': ['Wo genau in Spanien bist du?', 'Geniesse deine Ferien 😊', 'Mega schönes Foto!!!']
-    },
-
-];
-
-
+/**
+ * This function gets invoked in the beginning to show the post from the array posts.
+ */
 function show() {
     document.getElementById('post-section').innerHTML = '';
     for (let i = 0; i < posts.length; i++) {
         const post = posts[i];
-
         document.getElementById('post-section').innerHTML += showPosts(post, i);
     }
 }
 
 
+/**
+ * This function shows all the comments from a post.
+ * @param {Number} postIndex - The current index of the post.
+ */
 function showComments(postIndex) {
     document.getElementById(`commentsDescription${postIndex}`).classList.add('d-none');
     const post = posts[postIndex];
@@ -70,6 +30,11 @@ function showComments(postIndex) {
 }
 
 
+/**
+ * This function sets the comment section, so the comments can be shown.
+ * @param {Numbeer} postIndex - The current index of the post.
+ * @returns The html-elemnt of the comment-section.
+ */
 function sectionComments(postIndex) {
     return /*html*/`
     <div id="commentAndClose${postIndex}">
@@ -80,6 +45,10 @@ function sectionComments(postIndex) {
 }
 
 
+/**
+ * This function closes the comment-section.
+ * @param {Number} postIndex - The current index of the post.
+ */
 function closeComments(postIndex) {
     let commentSection = document.getElementById(`onlyComments${postIndex}`);
     commentSection.innerHTML = '';
@@ -88,9 +57,12 @@ function closeComments(postIndex) {
 }
 
 
+/**
+ * This function adds a comment to the post.
+ * @param {Number} postIndex - The current index of the post. 
+ */
 function addComment(postIndex) {
     let input = document.getElementById(`input${postIndex}`);
-
     if (input.value !== '') {
         posts[postIndex]['comments'].push(input.value);
         posts[postIndex]['commentsCount']++;
@@ -101,6 +73,10 @@ function addComment(postIndex) {
 }
 
 
+/**
+ * This function is to give or remove a like to the post, when you click on the heart.
+ * @param {Number} postIndex - The current index of the post.
+ */
 function like(postIndex) {
     let heart = posts[postIndex]['heart'];
     if (heart == './img/heart-regular.svg') {
@@ -114,6 +90,10 @@ function like(postIndex) {
 }
 
 
+/**
+ * This function saves or removes the save from a post, when you click on the bookmark-icon.
+ * @param {Number} postIndex - The current index of the post.
+ */
 function save(postIndex) {
     let saveIcon = posts[postIndex]['saveIcon'];
     if (saveIcon == './img/bookmark-regular.svg') {
@@ -125,11 +105,17 @@ function save(postIndex) {
 }
 
 
+/**
+ * This function shows the overlay-menu, when you click on the burger-menu in the responsive design.
+ */
 function showOverlay() {
     document.getElementById('overlay').classList.add('show-overlay');
 }
 
 
+/**
+ * This function removes the overlay-menu, when you click on the burger-menu in the responsive design.
+ */
 function closeOverlay() {
     document.getElementById('overlay').classList.remove('show-overlay');
 }

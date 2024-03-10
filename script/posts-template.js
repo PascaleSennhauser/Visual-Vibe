@@ -1,4 +1,9 @@
-
+/**
+ * This function shows a post.
+ * @param {Array} post - The current Array from the JSON-Array posts.
+ * @param {Number} i - The current index.
+ * @returns The html-element of a post-section gets returned.
+ */
 function showPosts(post, i) {  
     return /*html*/`<div class="post-container">
                 <div class="post-header">
